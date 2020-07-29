@@ -9,10 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: printenv
-        run: cat $${{ github.event_path }}
       - name: Checkout  
         uses: actions/checkout@v1
+
+      - name: printenv
+        run: cat $${{ github.event_path }}
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v1.1.0
         with:
