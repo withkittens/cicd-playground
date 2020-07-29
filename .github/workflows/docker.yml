@@ -18,4 +18,4 @@ jobs:
           repository: ${{ github.repository }}
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
-          tags: latest
+          tags: ${{ github.repository }}/helloworld
