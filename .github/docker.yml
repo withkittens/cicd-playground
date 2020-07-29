@@ -1,0 +1,18 @@
+﻿name: Docker
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v1.1.0
+        with:
+          registry: docker.pkg.github.com
+          repository: ${{ github.repository }}
+          username: ${{ github.repository_owner }}
+          password: ${{ github.token }}
