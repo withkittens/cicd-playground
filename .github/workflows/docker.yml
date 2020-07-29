@@ -15,7 +15,7 @@ jobs:
         uses: docker/build-push-action@v1.1.0
         with:
           registry: docker.pkg.github.com
-          repository: ${{ github.repository }}/HelloWorld
+          repository: ${{ github.repository }}/helloworld
           username: ${{ github.repository_owner }}
           password: ${{ github.token }}
           tags: latest
